@@ -1,12 +1,13 @@
-let btn = document.getElementById('saveGrades');
-console.log("test");
-btn.onclick = function(element) {
-  function takeBody() {
-    return document.getElementById('gradeSummaryTable').value;
-  }
-  chrome.tabs.executeScript({
-    code: '(' + takeBody + ')();'
-  }, (results) => {
-    console.log(results[0]);
-  });
+function click() {
+  console.log("test please work");
+  chrome.tabs.executeScript(null, {file:"download.js"});
 }
+/*
+console.log("test");
+
+document.getElementById('saveGrades').addEventListener('click',click);
+*/
+
+console.log("test");
+
+document.getElementById('saveGrades').addEventListener('click',click);
